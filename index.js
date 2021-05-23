@@ -115,11 +115,11 @@ exports.handler = async (event) => {
                var eventText = JSON.stringify(availableCenters, null, 2);
                var subject = `[${location}] Cowin vaccine availability update `;
              
-               var params = {
-                   Message: eventText,
-                   Subject: subject,
-                   TopicArn: smsTopicArn
-               };
+//                var params = {
+//                    Message: eventText,
+//                    Subject: subject,
+//                    TopicArn: smsTopicArn
+//                };
 
               // POST Vaccine availability updates to Twitter
               console.log("Posting tweet - " + JSON.stringify(availableCenters, null, 2));
