@@ -18,7 +18,7 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
   "accessTokenSecret": "TODO"
 }
 ```
-- Create an AWS cloudwatch rule to trigger the Lambda function for periodical updates/tweets to the Twitter account. A separate cloudwatch rule for each district could now be setup where the input to the function triggered is a json in the format above with the districtID corresponding to the district for which the bot is being setup. 
+- Create an AWS cloudwatch rule to trigger the Lambda function for periodical updates/tweets to the Twitter account. A separate cloudwatch rule for each district could now be setup where the input to the function triggered is a json in the format above with the districtID corresponding to the district for which the bot is being setup. A single lambda function can thus be re-used for multiple districts. 
 
 ### Example deployments 
 - [Pune Vaccine Watch](https://twitter.com/punevaccinewat1) 
