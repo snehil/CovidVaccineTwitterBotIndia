@@ -45,9 +45,9 @@ const today = formatDate(new Date());
 exports.handler = async (event, context) => {
     let dataString = '';
     
-    console.log("Input:" + event, null, 2);
-    
-    if (!event.hasOwnProperty(districtId)) {
+    console.log("Input:" + JSON.stringify(event, null, 2));
+
+    if (!event.hasOwnProperty("districtId")) {
         var error = new Error("districtId not specified in input.")
         context.fail(error);
         return null;
