@@ -7,6 +7,9 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
 - A Twitter developer account [with an application created](https://developer.twitter.com/en/docs/apps/overview) (With access to the [authentication keys and secrets](https://github.com/snehil/CovidVaccineTwitterBotIndia/blob/main/index.js#L33-L36))
 
 ### How to deploy?
+- [TODO] Cloudformation based deployment
+
+### How to deploy manually?
 - Run `npm install twitter` locally within the project folder, zip up the file contents and then deploy the code to an AWS lambda function in the Mumbai region. Make sure to include the index.js file in the zip file contents. 
 - A single lambda function could handle multiple districts. The input to the function should be a json that specifies the districtId and Twitter credentials like so
 ```json
