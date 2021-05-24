@@ -11,7 +11,7 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
 - A single lambda function could handle multiple districts. The input to the function should be a json that specifies the districtId like so
 ```json
 { "districtId": 363 }
-``a
+```
 - Create an AWS cloudwatch rule to trigger the Lambda function for periodical updates/tweets to the Twitter account. A separate cloudwatch rule for each district could now be setup where the input to the function triggered is a json in the format above with the districtID corresponding to the district for which the bot is being setup. 
 
 ### Example deployments 
