@@ -6,7 +6,7 @@ const Twitter = require("twitter");
 const smsTopicArn = '<SNS_TOPIC_ARN>'; // Deprecated
 const location = "PUNE";
 const districtId = "363";
-const maxAgeLimit = 45;
+const maxAgeLimit = 200;
 
 // Set region
 AWS.config.update({region: 'ap-south-1'});
