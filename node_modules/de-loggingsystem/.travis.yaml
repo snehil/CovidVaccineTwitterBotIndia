@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+    - "stable"
+dist: trusty
+sudo: required
+before_script:
+    - npm install -g codecov
+    - npm install
+script:
+    - npm run-script test:all
+after_success:
+    - npm run-script coverage
+    - npm run-script docs
+branches:
+    only:
+    - master
+    - develop
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    script:
+        - npm run-script semantic-release
+    on:
+        branch: master
+notifications:
+    email:
+        on_success: change
+        on_failure: change 
+git:
+    depth: 1
+    
