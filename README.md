@@ -26,4 +26,5 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
 ### Example deployments 
 - [Pune Vaccine Watch](https://twitter.com/punevaccinewat1) 
 - [Belgaum Vaccine Watch](https://twitter.com/BgmVaccineWatch)
+- [Bengaluru Vaccine Watch](https://twitter.com/BLRVaccineWatch)
 - [Nashik Vaccine Watch](https://twitter.com/nashikvaccinew1)
