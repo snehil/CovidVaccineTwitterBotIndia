@@ -159,7 +159,7 @@ exports.handler = async (event) => {
                 if (dose1Qty > 0 || dose2Qty > 0) {
                   if (tweetMsg.length > 280) {
                     const msg1 = tweetMsg.substring(0, 280);
-                    const msg2 = tweetMsg.substring(280, tweetMsg.length);
+                    const msg2 = `[${todaySplits[0]}/${todaySplits[1]}] ${tweetMsg.substring(280, tweetMsg.length)}`;
 
                     tweetMessages.add(msg1);
                     tweetMessages.add(msg2);
