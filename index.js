@@ -21,7 +21,6 @@ const postTweet = (twitterClient, msg) => {
     return new Promise((resolve, reject) => {
         console.info(`Posting tweet - ${msg}`);
         return twitterClient.post('statuses/update', {status: msg}).catch(console.error);
-        // return Promise.resolve();
     });
 };
 
