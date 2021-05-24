@@ -5,7 +5,7 @@ const Twitter = require("twitter");
 // [TODO] UPDATE THESE DETAILS FOR THE DESIRED LOCATION OR DEPLOYMENT ENVIRONMENT
 const smsTopicArn = '<SNS_TOPIC_ARN>'; // Deprecated
 const location = "PUNE";
-const districtId = "363";
+const districtId = "";
 const maxAgeLimit = 200;
 
 // Set region
@@ -42,8 +42,18 @@ const postTweet = msg => {
 
 const today = formatDate(new Date());
 
-exports.handler = async (event) => {
+exports.handler = async (event, context) => {
     let dataString = '';
+    
+    console.log("Input:" + event, null, 2);
+    
+    if (!event.hasOwnProperty(districtId)) {
+        var error = new Error("districtId not specified in input.")
+        context.fail(error);
+        return null;
+    }
+    
+    districtId = event.districtId || 0;
     let url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id="+ districtId +"&date="+ today;
     
     const formatMessage = msg => {
@@ -115,11 +125,11 @@ exports.handler = async (event) => {
                var eventText = JSON.stringify(availableCenters, null, 2);
                var subject = `[${location}] Cowin vaccine availability update `;
              
-//                var params = {
-//                    Message: eventText,
-//                    Subject: subject,
-//                    TopicArn: smsTopicArn
-//                };
+               var params = {
+                   Message: eventText,
+                   Subject: subject,
+                   TopicArn: smsTopicArn
+               };
 
               // POST Vaccine availability updates to Twitter
               console.log("Posting tweet - " + JSON.stringify(availableCenters, null, 2));
