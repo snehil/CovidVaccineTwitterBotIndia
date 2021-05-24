@@ -48,8 +48,7 @@ exports.handler = async (event, context) => {
     console.log("Input:" + JSON.stringify(event, null, 2));
 
     if (!event.hasOwnProperty("districtId")) {
-        var error = new Error("districtId not specified in input.")
-        context.fail(error);
+        context.fail(new Error("districtId not specified in input."));
         return null;
     }
     
