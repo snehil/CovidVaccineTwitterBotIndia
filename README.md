@@ -10,7 +10,7 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
 - [TODO] Cloudformation based deployment
 
 ### How to deploy manually?
-- Zip up all the contents from the root folder and then deploy the code to an AWS lambda function in the Mumbai region. 
+- Zip up all the contents from the root folder and then deploy the code to an AWS Node.js lambda function in the Mumbai region. 
 - A single lambda function can handle multiple districts. The input to the function should be a json that specifies the districtId and Twitter credentials like so
 ```json
 {
