@@ -5,7 +5,7 @@ const Twitter = require("twitter");
 // [TODO] UPDATE THESE DETAILS FOR THE DESIRED LOCATION OR DEPLOYMENT ENVIRONMENT
 const smsTopicArn = '<SNS_TOPIC_ARN>'; // Deprecated
 const location = "PUNE";
-const districtId = "";
+let   districtId = "";
 const maxAgeLimit = 200;
 
 // Set region
