@@ -62,11 +62,10 @@ exports.handler = async (event, context) => {
         res.on('end', () => {
             const response         = JSON.parse(dataString);
             const availableCenters = [];
-   
+            const tweetPromises    = [];
+            const tweetMessages    = new Set();
+            
             if (!response.hasOwnProperty('centers') || response.centers == null) return;
-   
-            const tweetPromises = [];
-            const tweetMessages = new Set();
 
             response.centers.forEach(center => {
                 if (center.hasOwnProperty('sessions')) {
