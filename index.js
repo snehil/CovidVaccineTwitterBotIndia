@@ -40,7 +40,6 @@ exports.handler = async (event, context) => {
 
     console.info(`Input: ${JSON.stringify(event, null, 2)}`);
 
-    // Input validation
     validateInput(event, context, 'districtId');
     validateInput(event, context, 'consumerKey');
     validateInput(event, context, 'consumerSecret');
