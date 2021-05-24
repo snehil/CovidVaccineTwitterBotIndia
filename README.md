@@ -1,4 +1,4 @@
-# Twitter Bot for Covid Vaccine Notifications (India)
+# AWS based Twitter Bot for Covid Vaccine Notifications (India)
 
 This project houses some code to quickly stand-up a Twitter bot that users can subscribe to get Covid vaccine availability notifications. 
 
