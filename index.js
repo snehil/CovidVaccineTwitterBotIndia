@@ -5,7 +5,6 @@ const Twitter = require("twitter");
 // [TODO] UPDATE THESE DETAILS FOR THE DESIRED LOCATION OR DEPLOYMENT ENVIRONMENT
 const smsTopicArn = '<SNS_TOPIC_ARN>'; // Deprecated
 const location = "PUNE";
-let   districtId = "";
 const maxAgeLimit = 200;
 
 // Set region
@@ -52,7 +51,7 @@ exports.handler = async (event, context) => {
         return null;
     }
     
-    districtId = event.districtId || 0;
+    const districtId = event.districtId || 0;
     let url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id="+ districtId +"&date="+ today;
     
     const formatMessage = msg => {
