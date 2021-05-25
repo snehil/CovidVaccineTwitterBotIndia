@@ -80,9 +80,9 @@ exports.handler = async (event, context) => {
                                 session.available_capacity > 0) {
                                  
                                 availableCenters.push(center);
-                            }
+                            } // else do nothing
                         });
-                    }
+                    } // else do nothing
                 } // else do nothing
             });
            
@@ -133,7 +133,7 @@ exports.handler = async (event, context) => {
                         } else {
                             tweetMessages.add(tweetMsg);
                         }
-                    }
+                    } // else do nothing
                 });
             }
 
