@@ -123,6 +123,7 @@ exports.handler = async (event, context) => {
                     tweetMsg     += `, Details-https://www.cowin.gov.in`;
 
                     if (dose1Qty > 0 || dose2Qty > 0) {
+                        // Split Tweet message if necessary
                         if (tweetMsg.length > maxTweetLength) {
                             const msg1 = tweetMsg.substring(0, maxTweetLength);
                             const msg2 = `[${todaySplits[0]}/${todaySplits[1]}] ${tweetMsg.substring(maxTweetLength, tweetMsg.length)}`;    
