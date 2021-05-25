@@ -144,8 +144,7 @@ exports.handler = async (event, context) => {
                 Promise.all(tweetPromises)
                     .then(console.log)
                     .catch(console.error);
-            }
-            // else do nothing
+            } // else do nothing
           });
         });
        
