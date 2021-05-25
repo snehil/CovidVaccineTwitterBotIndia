@@ -28,3 +28,4 @@ This project houses some code to quickly stand-up a Twitter bot that users can s
 - [Belgaum Vaccine Watch](https://twitter.com/BgmVaccineWatch)
 - [Bengaluru Vaccine Watch](https://twitter.com/BLRVaccineWatch)
 - [Nashik Vaccine Watch](https://twitter.com/nashikvaccinew1)
+- [Hyderabad Vaccine Watch](http://bit.ly/HydVaccineWatch)
