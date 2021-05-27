@@ -1,6 +1,6 @@
 const https   = require('https');
-const AWS     = require("aws-sdk");
-const Twitter = require("twitter");
+const AWS     = require('aws-sdk');
+const Twitter = require('twitter');
 
 // Set region
 AWS.config.update({ region: 'ap-south-1' });
