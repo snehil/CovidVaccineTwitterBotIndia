@@ -119,7 +119,8 @@ exports.handler = async (event, context) => {
                     const todaySplits = today.split('-');
 
                     // Build Tweet message
-                    let tweetMsg = `[${todaySplits[0]}/${todaySplits[1]}] ${vaccineNames} (Dose 1 Qty-${dose1Qty}, Dose 2 Qty-${dose2Qty}, Ages-${ages}, Dates-${dates}) available at - ${centerName}, ${centerAddress}`;
+                    let tweetMsg = `[${todaySplits[0]}/${todaySplits[1]}] ${vaccineNames} (Dose 1 Qty-${dose1Qty}, `;
+                    tweetMsg     += `Dose 2 Qty-${dose2Qty}, Ages-${ages}, Dates-${dates}) available at - ${centerName}, ${centerAddress}`;
                     tweetMsg     += `, Details-https://www.cowin.gov.in`;
 
                     if (dose1Qty > 0 || dose2Qty > 0) {
