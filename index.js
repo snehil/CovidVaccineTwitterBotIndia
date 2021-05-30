@@ -6,7 +6,7 @@ const Twitter = require('twitter');
 AWS.config.update({ region: 'ap-south-1' });
 
 const formatDate = date => {
-    const d     = new Date(date),
+    const d   = new Date(date),
         month = '' + (d.getMonth() + 1),
         day   = '' + d.getDate(),
         year  = d.getFullYear();
